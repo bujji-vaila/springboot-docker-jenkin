@@ -29,19 +29,10 @@ Step 3: create Dockerfile at root folder
 		ADD target/springboot-docker-jenkin.jar springboot-docker-jenkin.jar
 		ENTRYPOINT [ "java", "-jar","springboot-docker-jenkin.jar" ]
 
-		
-Step 4. build the docker image file below below command[Go to application rrot folder where docker file located]
-  
-        docker build -t spring-boot-docker-demo-01.jar
+      DevOps:
+	  jenkin read Docker file --> create image --> push image to dockerhub on each commit
 
-Step 5. run the container by below command
-   
-   docker run -p 9090:8080 spring-boot-docker-demo-01.jar
-   
-Step 6:  hit the browser url http://localhost:9090   
-
-
-Step : run  jenkin server and create job 
+Step 4: Devops auto run  jenkin server and create job 
        
 	   select checkbox GitHub project and enter url
 	   https://github.com/bujji-vaila/springboot-docker-jenkin/
