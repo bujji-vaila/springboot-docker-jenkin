@@ -40,3 +40,30 @@ Step 5. run the container by below command
    
 Step 6:  hit the browser url http://localhost:9090   
 
+
+Step : run  jenkin server and create job 
+       
+	   select checkbox GitHub project and enter url
+	   https://github.com/bujji-vaila/springboot-docker-jenkin/
+
+       select Source Code Management as Git and enter repository url
+	   https://github.com/bujji-vaila/springboot-docker-jenkin.git
+	   
+	   select Build Triggers as Poll SCM
+	   crone pattern * * * * *
+	   select Build as Invoke top-level Maven targets and enter install
+	   
+	   to integare docker below plugins are madatory
+	   1. CloudBees Docker Build and Publish plugins2. Docker Pipeline
+	   3. Docker plugins
+	   4. Docker build step
+	   after above plugin installed and restarted jenin server then only below option "Build/publish docker image" visible in at Build section Add build step dropdown
+	   goto project and configure
+	   http://localhost:8080/job/jenkin-docker-integration/configure
+	   
+	   jenkin must read docker file and build image and deploy in dockerhub
+	   select "Build/publish docker image" visible in at Build section Add build step dropdown
+	   then enter docker details
+	   
+	   
+	   
