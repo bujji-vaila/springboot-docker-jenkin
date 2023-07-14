@@ -65,5 +65,7 @@ Step : run  jenkin server and create job
 	   select "Build/publish docker image" visible in at Build section Add build step dropdown
 	   then enter docker details
 	   
+	   you can run build job and verify image in dockerhub
+	   
 	   
 	   
